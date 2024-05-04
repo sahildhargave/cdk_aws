@@ -1,0 +1,155 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "CognitoProtectedApi.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CognitoProtectedApi.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CognitoProtectedApi": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CognitoProtectedApi.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/31610b683e7c2bcfee4d9dcefef349a1a69eb780cb13a80f3aeec90039a03d16.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CognitoProtectedApi.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CognitoProtectedApi.assets"
+      ],
+      "metadata": {
+        "/CognitoProtectedApi/helloWorldFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldFunctionServiceRole8475DBF0"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldFunction00C940B5"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApi6825FB98"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiCloudWatchRole22367FBD"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiAccount3D66EADA"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiDeploymentCB1FF57464f3e9f368e40968a1aeabdb5bcc9580"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiDeploymentStageprod67DD79AF"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiEndpointC5601FAC"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Default/HELLO/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiHELLOAD091B67"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Default/HELLO/GET/ApiPermission.CognitoProtectedApihelloWorldLambdaRestApi9E9DB39D.GET..HELLO": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiHELLOGETApiPermissionCognitoProtectedApihelloWorldLambdaRestApi9E9DB39DGETHELLO61B4977B"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Default/HELLO/GET/ApiPermission.Test.CognitoProtectedApihelloWorldLambdaRestApi9E9DB39D.GET..HELLO": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiHELLOGETApiPermissionTestCognitoProtectedApihelloWorldLambdaRestApi9E9DB39DGETHELLOD4AD0AEF"
+          }
+        ],
+        "/CognitoProtectedApi/helloWorldLambdaRestApi/Default/HELLO/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloWorldLambdaRestApiHELLOGET6E88F46C"
+          }
+        ],
+        "/CognitoProtectedApi/userPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolDC9497E0"
+          }
+        ],
+        "/CognitoProtectedApi/cfnAuth": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cfnAuth"
+          }
+        ],
+        "/CognitoProtectedApi/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CognitoProtectedApi/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CognitoProtectedApi/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CognitoProtectedApi/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CognitoProtectedApi"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
